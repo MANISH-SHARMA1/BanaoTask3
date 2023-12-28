@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="root.css" />
+  </head>
+  <body>
+    <form id="form" class="input">
+      <div class="blue autoLayout1">
+        <img src="./Search.png" alt="search" width="20px" height="20px" />
+        <input
+          type="text"
+          id="input"
+          class="hvr fs1 blue"
+          onclick="getFocus()"
+        />
+      </div>
+      <button type="submit" class="fs2 blue autoLayout2" id="submit">
+        Submit
+      </button>
+    </form>
+
+    <script>
+      // TO GET FOCUS ON CLICK
+      function getFocus() {
+        document.getElementById("input").focus();
+      }
+
+      let form = document.getElementById("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        showLoading();
+      });
+
+      //   TO SHOW LOADING FOR 2 SECOND
+      function showLoading() {
+        changeStyle();
+
+        setTimeout(() => {
+          defaulStyle();
+        }, 2000);
+      }
+
+      //   TO DISABLE INPUT FIELD
+      function changeStyle() {
+        document.getElementById("submit").style.cursor = "progress";
+        document.getElementById("input").disabled = true;
+      }
+
+      //   TO SET TO DEFAULT STATE
+      function defaulStyle() {
+        document.getElementById("submit").style.cursor = "default";
+        document.getElementById("input").disabled = false;
+      }
+    </script>
+  </body>
+</html>

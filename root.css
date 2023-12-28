@@ -1,0 +1,72 @@
+:root {
+  --f: flex;
+  --col: column;
+  --aliIt: center;
+  --abs: absolute;
+  --bg: #1890ff;
+  --br: 2px;
+  --ff: "Roboto";
+  --style: normal;
+  --fw: 400;
+  --color: #ffffff;
+}
+
+.input {
+  display: var(--f);
+  flex-direction: var(--col);
+  align-items: var(--aliIt);
+  padding: 8px 16px;
+  gap: 8px;
+}
+
+.blue {
+  background: var(--bg);
+  border-radius: var(--br);
+}
+
+.autoLayout1 {
+  display: var(--f);
+  flex-direction: row;
+  align-items: var(--aliIt);
+  padding: 0px;
+  gap: 8px;
+}
+
+.autoLayout2 {
+  display: var(--f);
+  flex-direction: row;
+  align-items: var(--aliIt);
+  padding: 0px;
+  gap: 8px;
+  width: 45px;
+  height: 22px;
+}
+
+input,
+button {
+  border: var(--br) solid var(--bg);
+}
+
+.hvr:hover {
+  background: var(--color);
+}
+
+.fs1 {
+  font-family: var(--ff);
+  font-style: var(--style);
+  font-weight: var(--fw);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.fs2 {
+  font-family: var(--ff);
+  font-style: var(--style);
+  font-weight: var(--fw);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.disabled {
+  color: var(--color);
+}
